@@ -23,7 +23,7 @@ jobs:
         run: |
           mkdir -p $HOME/jmeter
           curl -L https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.4.1.tgz | tar xz --directory $HOME/jmeter --strip-components=1
-        working-directory: $HOME
+      
 
       - name: Run JMeter Test
         run: |
