@@ -27,9 +27,9 @@ jobs:
 
       - name: Run JMeter Test
         run: |
-         $HOME/jmeter/bin/jmeter -n -t JMeterTest/Jmeter-1.jmx -l $GITHUB_WORKSPACE/results.jtl
-        working-directory: $GITHUB_WORKSPACE
-
+         cd $GITHUB_WORKSPACE  # Navigate to the repository's code
+          jmeter -n -t JMeterTest/Jmeter-1.jmx -l JMeterTest/results.jtl
+          
       - name: Upload Test Results
         uses: actions/upload-artifact@v2
         with:
