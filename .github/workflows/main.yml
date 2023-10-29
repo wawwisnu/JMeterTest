@@ -27,7 +27,7 @@ jobs:
 
       - name: Run JMeter Test
         run: |
-          $HOME/jmeter/bin/jmeter -n -t C:\Users\wisnu.wicaksono\Documents\CobaGIT\test.Jmeter-1 results.jtl
+         $HOME/jmeter/bin/jmeter -n -t Jmeter-1.jmx -l $GITHUB_WORKSPACE/results.jtl
         working-directory: $GITHUB_WORKSPACE
 
       - name: Upload Test Results
