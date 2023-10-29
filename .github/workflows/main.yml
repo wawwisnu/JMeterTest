@@ -28,7 +28,7 @@ jobs:
       - name: Run JMeter Test
         run: |
          cd $GITHUB_WORKSPACE  # Navigate to the repository's code
-          jmeter -n -t JMeterTest/Jmeter-1.jmx -l JMeterTest/results.jtl
+         $HOME/jmeter/bin/jmeter -n -t JMeterTest/Jmeter-1.jmx -l JMeterTest/results.jtl
          working-directory: $GITHUB_WORKSPACE
           
       - name: Upload Test Results
